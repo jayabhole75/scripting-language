@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datepicker Example</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
+</head>
+<body>
+    <label for="datepicker">Choose a date:</label>
+    <input type="text" id="datepicker">
+
+    <script>
+        $(document).ready(function() {
+            $("#datepicker").datepicker({
+                dateFormat: "dd-mm-yy", // Custom date format: day-month-year (e.g., 30-04-2024)
+                onSelect: function(dateText, inst) {
+                    // This function is called when a date is selected
+                    alert("Selected date: " + dateText);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

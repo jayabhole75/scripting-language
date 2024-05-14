@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datepicker Example</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $("#datepicker").datepicker({
+        dateFormat: "yy-mm-dd",
+        onSelect: function(dateText) {
+          alert("Selected date: " + dateText);
+        }
+      });
+    });
+  </script>
+  <style>
+    .ui-datepicker {
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Select a Date:</h2>
+  <input type="text" id="datepicker" placeholder="Select Date">
+</body>
+</html>

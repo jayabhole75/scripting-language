@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery Effects</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $("#fade-in-btn").click(function(){
+        $("#effects-div").fadeIn(1000, function(){
+          $(this).text("Faded In");
+        });
+      });
+      $("#fade-out-btn").click(function(){
+        $("#effects-div").fadeOut(1000);
+      });
+      $("#slide-down-btn").click(function(){
+        $("#effects-div").slideDown(1000, function(){
+          $(this).text("Slide Down");
+        });
+      });
+      $("#slide-up-btn").click(function(){
+        $("#effects-div").slideUp(1000);
+      });
+      $("#custom-animation-btn").click(function(){
+        $("#effects-div").animate({
+          width: "toggle",
+          height: "toggle",
+          opacity: "toggle" 
+        }, 1000, function(){
+          $(this).text("Custom Animation");
+        });
+      });
+    });
+  </script>
+  <style>
+    #effects-div {
+      width: 200px;
+      height: 100px;
+      margin-bottom: 10px;
+      background-color: rgb(120, 240, 138);
+      display: none; 
+      text-align: center;
+      line-height: 100px;
+      font-size: 20px;
+    }
+    button {
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h2>jQuery Effects</h2>
+  <button id="fade-in-btn">Fade In</button>
+  <button id="fade-out-btn">Fade Out</button>
+  <button id="slide-down-btn">Slide Down</button>
+  <button id="slide-up-btn">Slide Up</button>
+  <button id="custom-animation-btn">Custom Animation</button>
+
+  <div id="effects-div"></div>
+</body>
+</html>

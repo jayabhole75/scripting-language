@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check for Uppercase</title>
+</head>
+<body>
+    <form>
+        <label for="word">Enter a Word:</label><br<br>
+        <input type="text" id="word" name="word" required><br>
+        <input type="button" value="submit" onclick="checkForUppercase()">
+    </form>
+    <script>
+        function checkForUppercase(){
+            const string=document.getElementById('word').value
+            const firstCharacter = string.charAt(0);
+            if (firstCharacter === firstCharacter.toUpperCase()) {
+                alert("First character is uppercase.");
+            } else {
+                alert("First character is not uppercase.");
+            }
+        }
+    </script>
+</body>
+</html>

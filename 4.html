@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Form</title>
+</head>
+<body>
+    <h2>Name Form</h2>
+    <form>
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required><br><br>
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required><br><br>
+        <input type="button" value="submit" onclick="getNames()">
+    </form>
+    <script>
+        function getNames() {
+            const firstName = document.getElementById('firstName').value
+            const lastName = document.getElementById('lastName').value
+            alert("Hello, " + firstName + " " + lastName)
+        }
+    </script>
+</body>
+</html>
